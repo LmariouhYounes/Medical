@@ -1,0 +1,113 @@
+<!-- reder-vous -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Date</label>
+                <input type="date" class="form-control" id="exampleInputDate1" aria-describedby="Datehelp" placeholder="Enter La Date de Rendez-vous">
+                <small id="DateHelp" class="form-text text-muted">Vous devez entrer une date correcte.</small>
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1">Message</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" style="overflow-y: scroll;"></textarea>
+              </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Confirm</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--      end reder-vous           -->
+<!--        container       -->
+            <!--    start text-->
+            <section class="banner-area relative" id="service">
+                <div class="stl-div1 container p-3 my-3 border align-items-center justify-content-center">
+                    Here you can search for any doctors or Medical Centers.
+                </div>
+            </section>
+
+            <!--    end text-->
+
+            <!-- Start search Area -->
+            <section class="banner-area relative" id="service">
+                <div class="stl-div2 container p-3 my-3 border align-items-center justify-content-center">
+                        <form method="GET" action="#" class="form-inline align-items-center justify-content-center">
+                                <input name="center" placeholder="What do you want?" onfocus="this.placeholder = ''" onblur="this.placeholder = 'What do you want?'" class="form-control ml-10 mt-30 mb-30" required="" style="width: 600px !important;" type="text" required>
+
+                                <input name="position" placeholder="Enter your city" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your city'" class="form-control ml-10 mt-30 mb-30" required="" type="text" required>
+                                <button type="button" class="btn btn-outline-light ml-10 mt-30 mb-30">Search</button>
+                        </form>
+                    </div>
+            </section>
+            <!-- End search Area -->
+
+<!--        start container       -->
+<div class="invalid-feedback ml-10 mb-10">
+    Please enter a valid information.
+</div>
+
+<div id="div_aff" class="info container " id="info">
+    <div id="result-1" class="cabinet row fullscreen align-items-center justify-content-center mb-10">
+        <div class="container col-md-8">
+            <h2>
+                <a routerLink="/profile" class="badge badge-warning">1</a>
+                <a routerLink="/profile">Cabinet Errazy</a>
+            </h2>
+            
+                <h3 id="med">Medecin : Abelkarim Errazy</h3>
+                <h3 id="cite">city : Beni Mellal</h3>
+                <h3 id="spec">Speciality : Neurochirurgy</h3>
+                <h4><a [routerLink]="['profile',1]">Click for more informations...</a></h4>
+            
+        </div>
+        <div class="container col-md-4">
+            <button type="button" class="btn btn-primary mb-10" style="width: 100% !important;" data-toggle="modal" data-target="#exampleModalCenter">Rendez-vous</button>
+        </div>
+    </div>
+    <div id="result-1" class="cabinet row fullscreen align-items-center justify-content-center mb-10">
+        <div class="container col-md-8">
+            <h2>
+                <a routerLink="/profile" class="badge badge-warning">2</a>
+                <a routerLink="/profile">Cabinet AlAdlabi</a>
+            </h2>
+            
+                <h3 id="med">Doctor : Aberrahman AlAdlabi</h3>
+                <h3 id="cite">city : Beni Mellal</h3>
+                <h3 id="spec">Speciality : Neurochirurgy</h3>
+                <h4><a [routerLink]="['profile',112]">Click for more informations...</a></h4>
+            
+        </div>
+        <div class="container col-md-4">
+            <button type="button" class="btn btn-primary mb-10" data-toggle="modal" data-target="#exampleModalCenter">Rendez-vous</button>
+        </div>
+    </div>
+    <div id="result-1" class="cabinet row fullscreen align-items-center justify-content-center mb-10">
+        <div class="container col-md-8">
+            <h2>
+                <a routerLink="/profile" class="badge badge-warning">3</a>
+                <a routerLink="/profile">Clinique Atlas</a>
+            </h2>
+          
+                <h3 id="med">Doctor : Mohammed Amine Alaoui</h3>
+                <h3 id="cite">city : Beni Mellal</h3>
+                <h3 id="spec">Speciality : General Health Safe</h3>
+                <h4><a [routerLink]="['profile',113]">Click for more informations...</a></h4>
+            
+        </div>
+        <div class="container col-md-4">
+            <button type="button" class="btn btn-primary mb-10" data-toggle="modal" data-target="#exampleModalCenter">Rendez-vous</button>
+        </div>
+    </div>
+</div>
+<button id="btn_aff" class="btn btn-outline-primary" style="margin-left: 45%;" onclick="aff();">Afficher Plus</button>
+
